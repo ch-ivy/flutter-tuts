@@ -13,14 +13,10 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: () {
-            print("Button is changed!");
-          },
-          icon: Icon(Icons.alternate_email),
-          color: Colors.blue,
-        ),
+      body: Container(
+        color: Colors.grey[400],
+        child: Text("Hello"),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
