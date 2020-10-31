@@ -14,15 +14,19 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
-        child: RaisedButton(
+        child: RaisedButton.icon(
           onPressed: () {
-            print("You clicked Me!!");
+            print("Icon Button is Clicked");
           },
-          child: Text("Button Widget"),
+          icon: Icon(Icons.mail),
+          label: Text("Mail Me!"),
+          color: Colors.amber,
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          print("Mommy 🤣");
+        },
         child: Text("Click!"),
         backgroundColor: Colors.blueAccent,
       ),
