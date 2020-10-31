@@ -14,10 +14,11 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
-        child: Icon(
-          Icons.airport_shuttle,
-          color: Colors.lightBlue,
-          size: 50,
+        child: RaisedButton(
+          onPressed: () {
+            print("You clicked Me!!");
+          },
+          child: Text("Button Widget"),
         ),
       ),
       floatingActionButton: FloatingActionButton(
