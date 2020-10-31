@@ -13,10 +13,9 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Container(
-        color: Colors.grey[400],
-        child: Text("Hello"),
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      body: Padding(
+        padding: EdgeInsets.all(90.0),
+        child: Text("Hello World"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
