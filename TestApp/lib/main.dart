@@ -14,7 +14,11 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
-        child: Image.asset('assets/img-3.jpg'),
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.lightBlue,
+          size: 50,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
