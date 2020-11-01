@@ -13,19 +13,27 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text("Children Widget"),
-          FlatButton(
-              onPressed: () {},
-              child: Text("Click Me!"),
-              color: Colors.blueGrey[300]),
+          Row(
+            children: <Widget>[Text("Hello"), Text("World")],
+          ),
           Container(
-            color: Colors.cyan,
-            padding: EdgeInsets.all(30),
-            child: Text("Inside Container"),
+            padding: EdgeInsets.all(20.0),
+            color: Colors.blueAccent[200],
+            child: Text('one'),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.blueAccent[400],
+            child: Text('Two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.blueAccent[700],
+            child: Text('Three'),
           )
         ],
       ),
