@@ -1,56 +1,91 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: HomePage()));
+  runApp(MaterialApp(home: NinjaCard()));
 }
 
-class HomePage extends StatelessWidget {
+class NinjaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text("Test App"),
+        title: Text('Ninja ID Card'),
         centerTitle: true,
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.grey[850],
+        elevation: 0.0,
       ),
-      body: Row(
-        children: <Widget>[
-          Expanded(
-            child: Image.asset('assets/img-3.jpg'),
-            flex: 3,
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.cyan,
-              child: Text('1'),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/img-1.jpg'),
+                radius: 40.0,
+              ),
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.pinkAccent,
-              child: Text('2'),
+            Divider(
+              height: 80.0,
+              color: Colors.grey[600],
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.amber,
-              child: Text('3'),
+            Text(
+              "NAME",
+              style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
             ),
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("Mommy 🤣");
-        },
-        child: Text("Click!"),
-        backgroundColor: Colors.blueAccent,
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              "Chun-Li",
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  fontSize: 28.0,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Text(
+              "CIRRENT NINJA LEVEL",
+              style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              "8",
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  fontSize: 28.0,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  'chun.li@nijas.com',
+                  style: TextStyle(
+                      color: Colors.grey[400],
+                      fontSize: 18.0,
+                      letterSpacing: 1.0),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
