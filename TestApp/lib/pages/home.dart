@@ -10,7 +10,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    data = ModalRoute.of(context).settings.arguments;
+    data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
     print(data);
 
     String bgImage = data['dayTime'] ? 'img-1.jpg' : 'img-3.jpg';
@@ -28,8 +28,12 @@ class _HomeState extends State<Home> {
               child: Column(
                 children: [
                   FlatButton.icon(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/location');
+                    onPressed: () async {
+                      dynamic result =
+                          await Navigator.pushNamed(context, '/location');
+                      setState(() {
+                        data = result;
+                      });
                     },
                     icon: Icon(
                       Icons.edit_location,
