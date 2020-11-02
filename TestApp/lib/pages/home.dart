@@ -33,13 +33,13 @@ class _HomeState extends State<Home> {
                     },
                     icon: Icon(
                       Icons.edit_location,
-                      color: Colors.red[900],
+                      color: Colors.deepOrange[900],
                     ),
                     label: Text(
                       'Edit Location',
-                      style: TextStyle(color: Colors.red[900]),
+                      style: TextStyle(color: Colors.deepOrange[900]),
                     ),
-                    color: Colors.red[50],
+                    color: Colors.deepOrange[50],
                   ),
                   SizedBox(
                     height: 20.0,
@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                             fontSize: 20.0,
                             letterSpacing: 2.0,
-                            color: Colors.deepOrangeAccent),
+                            color: Colors.deepOrange[900]),
                       )
                     ],
                   ),
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                   Text(
                     data['time'],
                     style:
-                        TextStyle(fontSize: 66, color: Colors.deepOrangeAccent),
+                        TextStyle(fontSize: 66, color: Colors.deepOrange[900]),
                   )
                 ],
               )),
